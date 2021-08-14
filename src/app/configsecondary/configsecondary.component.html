@@ -1,0 +1,41 @@
+<div [ngClass]="{'main-div' : redirect, 'side-div': !redirect}">
+  <form [formGroup]="configForm" (ngSubmit)="saveConfig()">
+    <mat-card  [ngClass]="{'example-card' : redirect, 'side-example-card': !redirect}">
+      <mat-card-header>
+        <mat-card-title *ngIf="redirect">Configuration 2 of 2</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="config-form">
+
+        <mat-form-field class="config-form-field config-form-field-dropdown" appearance="fill">
+          <mat-label>Stash tab: Currency</mat-label>
+          <mat-select formControlName="currency" required>
+            <mat-option *ngFor="let stash of stashes" [value]="stash">
+              {{stash}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="config-form-field config-form-field-dropdown" appearance="fill">
+          <mat-label>Stash tab: Dump</mat-label>
+          <mat-select formControlName="dump" required>
+            <mat-option *ngFor="let stash of stashes" [value]="stash">
+              {{stash}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="config-form-field config-form-field-dropdown" appearance="fill">
+          <mat-label>Stash tabs: sell</mat-label>
+          <mat-select formControlName="sell" multiple required>
+            <mat-option *ngFor="let stash of stashes" [value]="stash">{{stash}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="saveConfig()" mat-button>SAVE</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+
+  </div>

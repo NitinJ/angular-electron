@@ -1,28 +1,29 @@
+import { ConfigsecondaryComponent } from './configsecondary/configsecondary.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './shared/components';
+import { RouterModule, Routes } from '@angular/router';
+import {HomeComponent} from './home';
+import { TasksComponent } from './tasks';
+import { RegisterComponent } from './home/register';
+import { ConfigComponent } from './config/config.component';
+import { ErrorComponent } from './error/error.component';
+import { SettingsComponent } from './settings/settings.component';
 
-import { HomeRoutingModule } from './home/home-routing.module';
-import { DetailRoutingModule } from './detail/detail-routing.module';
+
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  }
-];
+  { path: '', component: HomeComponent },
+  { path: 'tasks', component: TasksComponent },
+  { path: 'register', component: RegisterComponent},
+  { path: 'config', component: ConfigComponent},
+  { path: 'configsecondary', component: ConfigsecondaryComponent},
+  { path: 'error', component: ErrorComponent},
+  { path: 'settings', component: SettingsComponent},
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-    HomeRoutingModule,
-    DetailRoutingModule
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

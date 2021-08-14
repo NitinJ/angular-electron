@@ -2,32 +2,61 @@ import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
+import { ChildProcess, spawn, exec } from 'child_process';
+var kill  = require('tree-kill');
 
 // Initialize remote module
 require('@electron/remote/main').initialize();
 
 let win: BrowserWindow = null;
+let siosaBackendChildProcess: ChildProcess = null;
+
 const args = process.argv.slice(1),
   serve = args.some(val => val === '--serve');
 
-function createWindow(): BrowserWindow {
+function killBackend() {
+  if (siosaBackendChildProcess) {
+    exec('taskkill /F /IM source.exe /T', () => {});
+    // kill(siosaBackendChildProcess.pid, 'SIGKILL');
+  }
+}
+function spawnBackend() {
+  const siosa = spawn('resources/source.exe', {
+      detached: false,
+      windowsHide: true,
+      stdio: 'ignore'
+  });
+  siosa.on('error', (err) => {
+      console.error('Failed to start siosa.');
+  });
+  siosa.on('spawn', () => {
+    console.error('Siosa started !');
+  })
+  return siosa;
+}
 
+function createWindow(): BrowserWindow {
+  siosaBackendChildProcess = spawnBackend();
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
 
   // Create the browser window.
   win = new BrowserWindow({
-    x: 0,
-    y: 0,
-    width: size.width,
-    height: size.height,
+    width: 1280,
+    height: 768,
+    fullscreenable: false,
+    title: "Siosa",
+    autoHideMenuBar: true,
+    frame: true,
     webPreferences: {
       nodeIntegration: true,
+      // devTools: (serve) ? true : false,
       allowRunningInsecureContent: (serve) ? true : false,
       contextIsolation: false,  // false if you want to run e2e test with Spectron
       enableRemoteModule : true // true if you want to run e2e test with Spectron or use remote module in renderer context (ie. Angular)
     },
   });
+  win.setMenuBarVisibility(false);
 
 
   if (serve) {
@@ -72,6 +101,7 @@ try {
 
   // Quit when all windows are closed.
   app.on('window-all-closed', () => {
+    killBackend();
     // On OS X it is common for applications and their menu bar
     // to stay active until the user quits explicitly with Cmd + Q
     if (process.platform !== 'darwin') {

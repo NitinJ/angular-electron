@@ -1,0 +1,28 @@
+{
+    "/license": {
+      "target": "http://localhost:5000",
+      "secure": false
+    },
+    "/config/get": {
+      "target": "http://localhost:5000",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": false
+    },
+    "/config/update": {
+      "target": "http://localhost:5000",
+      "secure": false
+    },
+    "/task/get": {
+      "target": "http://localhost:5000",
+      "secure": false
+    },
+    "/task/create/*": {
+      "target": "http://localhost:5000",
+      "secure": false
+    },
+    "/task/stop": {
+      "target": "http://localhost:5000",
+      "secure": false
+    }
+}

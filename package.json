@@ -1,12 +1,7 @@
 {
-  "name": "angular-electron",
-  "version": "10.1.0",
-  "description": "Angular 12 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
-  "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
-  },
+  "name": "siosa",
+  "version": "0.0.0",
+  "description": "Siosa UI",
   "keywords": [
     "angular",
     "angular 12",
@@ -41,16 +36,20 @@
     "lint": "ng lint"
   },
   "dependencies": {
+    "@angular/animations": "12.1.2",
+    "@angular/cdk": "12.2.0",
     "@angular/common": "12.1.2",
     "@angular/compiler": "12.1.2",
     "@angular/core": "12.1.2",
     "@angular/forms": "12.1.2",
     "@angular/language-service": "12.1.2",
+    "@angular/material": "12.2.0",
     "@angular/platform-browser": "12.1.2",
     "@angular/platform-browser-dynamic": "12.1.2",
     "@angular/router": "12.1.2",
     "@electron/remote": "1.2.0",
     "rxjs": "~6.6.0",
+    "tree-kill": "1.2.2",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
   },

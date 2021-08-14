@@ -1,0 +1,77 @@
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="Tasks">
+    <div class="container">
+      <div *ngIf="!loading" class="tasks-container">
+        <mat-accordion>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Trader</mat-panel-title>
+              <mat-panel-description>
+                Handles incoming trades
+                <mat-chip-list>
+                  <mat-chip color="primary" *ngIf="task=='trade' && state<=1" selected>Running</mat-chip>
+                  <mat-chip color="accent" *ngIf="task=='trade' && state==2" selected>Stopping</mat-chip>
+                  <mat-chip color="primary"  *ngIf="starting == 'trade'" selected>Starting..</mat-chip>
+                </mat-chip-list>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="example-button-row">
+
+              <button *ngIf="(!task || state==3) && !starting" class="task-button" mat-raised-button color="primary" (click)="startTask('trade')">START</button>
+              <button *ngIf="task=='trade' && state<=1" class="task-button"  mat-raised-button color="warn" (click)="stopTasks()">STOP</button>
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Roller</mat-panel-title>
+              <mat-panel-description>
+                Rolls items for crafting
+                <mat-chip-list>
+                  <mat-chip color="primary"  *ngIf="starting == 'roller'" selected>Starting..</mat-chip>
+                  <mat-chip color="primary"  *ngIf="task=='roller' && state<=1" selected>Running</mat-chip>
+                  <mat-chip *ngIf="task=='roller' && state==3">Complete</mat-chip>
+                </mat-chip-list>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div [formGroup]="rollerFormGroup">
+              <mat-form-field class="rollerconfig-full-width" appearance="fill">
+                <mat-label>Roller config</mat-label>
+                <textarea [formControlName]="'rollerConfig'" matInput required placeholder="Paste the roller config here..."></textarea>
+              </mat-form-field>
+            </div>
+
+            <div class="example-button-row">
+              <button *ngIf="(!task || state==3) && !starting" class="task-button" mat-raised-button color="primary" (click)="startTask('roller')">START</button>
+              <button *ngIf="task=='roller' && state<=1" class="task-button"  mat-raised-button color="warn" (click)="stopTasks()">STOP</button>
+            </div>
+          </mat-expansion-panel>
+
+
+        </mat-accordion>
+      </div>
+      <div class="spinner" *ngIf="loading">
+        <mat-spinner diameter=20></mat-spinner>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab class="settings" label="Settings">
+    <div class="container">
+      <div class="settings-container">
+        <mat-card>
+          <mat-tab-group (selectedTabChange)="tabChanged($event)">
+            <mat-tab label="Account">
+              <app-config [redirect]="false"></app-config>
+            </mat-tab>
+            <mat-tab label="Stashes">
+              <app-config-secondary [redirect]="false"></app-config-secondary>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card>
+
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+

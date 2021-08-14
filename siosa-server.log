@@ -1,0 +1,74 @@
+1628628158.307227 - 20968: [utils.py:29 - validate_fields() ] Validating : account_name 
+1628628158.308227 - 20968: [utils.py:39 - validate_fields() ] account_name : invalid 
+1628628158.308227 - 20968: [utils.py:29 - validate_fields() ] Validating : poe_session_id 
+1628628158.309226 - 20968: [utils.py:39 - validate_fields() ] poe_session_id : invalid 
+1628628158.309226 - 20968: [utils.py:29 - validate_fields() ] Validating : client_log_file_path 
+1628628158.309226 - 20968: [utils.py:39 - validate_fields() ] client_log_file_path : invalid 
+1628628158.309226 - 20968: [utils.py:29 - validate_fields() ] Validating : league 
+1628628159.473206 - 20968: [utils.py:42 - validate_fields() ] league : valid 
+1628628159.473206 - 20968: [utils.py:29 - validate_fields() ] Validating : license_key 
+1628628159.474204 - 20968: [license.py:29 - valid() ] Validating license 
+1628628159.474204 - 20968: [license.py:31 - valid() ] License key not set ! 
+1628628159.474204 - 20968: [utils.py:39 - validate_fields() ] license_key : invalid 
+1628628159.474204 - 20968: [utils.py:29 - validate_fields() ] Validating : dump 
+1628628159.474204 - 20968: [utils.py:42 - validate_fields() ] dump : valid 
+1628628159.474204 - 20968: [utils.py:29 - validate_fields() ] Validating : currency 
+1628628159.474204 - 20968: [utils.py:42 - validate_fields() ] currency : valid 
+1628628159.474204 - 20968: [utils.py:29 - validate_fields() ] Validating : sell 
+1628628159.474204 - 20968: [utils.py:42 - validate_fields() ] sell : valid 
+1628628159.474204 - 20968: [utils.py:29 - validate_fields() ] Validating : close_all_user_interface 
+1628628159.475206 - 20968: [utils.py:42 - validate_fields() ] close_all_user_interface : valid 
+1628628159.475206 - 20968: [utils.py:29 - validate_fields() ] Validating : task_stop 
+1628628159.475206 - 20968: [utils.py:42 - validate_fields() ] task_stop : valid 
+1628628159.475206 - 20968: [siosa_config.py:22 - __init__() ] Initialized config: {'account_name': '', 'poe_session_id': '', 'client_log_file_path': '', 'league': 'Standard', 'license_key': '', 'dump': [], 'currency': [], 'sell': [], 'close_all_user_interface': ['Esc'], 'task_stop': 'Ctrl+q'} 
+1628628159.495193 - 20968: [_internal.py:225 - _log() ]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) 
+1628628286.672411 - 11908: [_internal.py:225 - _log() ] 127.0.0.1 - - [11/Aug/2021 02:14:46] "GET /config/get HTTP/1.1" 200 - 
+1628628628.572475 - 21440: [utils.py:29 - validate_fields() ] Validating : account_name 
+1628628628.573474 - 21440: [utils.py:39 - validate_fields() ] account_name : invalid 
+1628628628.573474 - 21440: [utils.py:29 - validate_fields() ] Validating : poe_session_id 
+1628628628.573474 - 21440: [utils.py:39 - validate_fields() ] poe_session_id : invalid 
+1628628628.574474 - 21440: [utils.py:29 - validate_fields() ] Validating : client_log_file_path 
+1628628628.574474 - 21440: [utils.py:39 - validate_fields() ] client_log_file_path : invalid 
+1628628628.574474 - 21440: [utils.py:29 - validate_fields() ] Validating : league 
+1628628629.732050 - 21440: [utils.py:42 - validate_fields() ] league : valid 
+1628628629.732050 - 21440: [utils.py:29 - validate_fields() ] Validating : license_key 
+1628628629.732050 - 21440: [license.py:29 - valid() ] Validating license 
+1628628629.732050 - 21440: [license.py:31 - valid() ] License key not set ! 
+1628628629.732050 - 21440: [utils.py:39 - validate_fields() ] license_key : invalid 
+1628628629.732050 - 21440: [utils.py:29 - validate_fields() ] Validating : dump 
+1628628629.733049 - 21440: [utils.py:42 - validate_fields() ] dump : valid 
+1628628629.733049 - 21440: [utils.py:29 - validate_fields() ] Validating : currency 
+1628628629.733049 - 21440: [utils.py:42 - validate_fields() ] currency : valid 
+1628628629.733049 - 21440: [utils.py:29 - validate_fields() ] Validating : sell 
+1628628629.733049 - 21440: [utils.py:42 - validate_fields() ] sell : valid 
+1628628629.733049 - 21440: [utils.py:29 - validate_fields() ] Validating : close_all_user_interface 
+1628628629.733049 - 21440: [utils.py:42 - validate_fields() ] close_all_user_interface : valid 
+1628628629.734050 - 21440: [utils.py:29 - validate_fields() ] Validating : task_stop 
+1628628629.734050 - 21440: [utils.py:42 - validate_fields() ] task_stop : valid 
+1628628629.734050 - 21440: [siosa_config.py:22 - __init__() ] Initialized config: {'account_name': '', 'poe_session_id': '', 'client_log_file_path': '', 'league': 'Standard', 'license_key': '', 'dump': [], 'currency': [], 'sell': [], 'close_all_user_interface': ['Esc'], 'task_stop': 'Ctrl+q'} 
+1628628629.758036 - 21440: [_internal.py:225 - _log() ]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) 
+1628628630.565573 - 9800: [_internal.py:225 - _log() ] 127.0.0.1 - - [11/Aug/2021 02:20:30] "GET /config/get HTTP/1.1" 200 - 
+1628628708.849411 - 20968: [utils.py:29 - validate_fields() ] Validating : account_name 
+1628628708.850409 - 20968: [utils.py:39 - validate_fields() ] account_name : invalid 
+1628628708.850409 - 20968: [utils.py:29 - validate_fields() ] Validating : poe_session_id 
+1628628708.850409 - 20968: [utils.py:39 - validate_fields() ] poe_session_id : invalid 
+1628628708.850409 - 20968: [utils.py:29 - validate_fields() ] Validating : client_log_file_path 
+1628628708.851410 - 20968: [utils.py:39 - validate_fields() ] client_log_file_path : invalid 
+1628628708.851410 - 20968: [utils.py:29 - validate_fields() ] Validating : league 
+1628628709.981542 - 20968: [utils.py:42 - validate_fields() ] league : valid 
+1628628709.981542 - 20968: [utils.py:29 - validate_fields() ] Validating : license_key 
+1628628709.982542 - 20968: [license.py:29 - valid() ] Validating license 
+1628628709.982542 - 20968: [license.py:31 - valid() ] License key not set ! 
+1628628709.982542 - 20968: [utils.py:39 - validate_fields() ] license_key : invalid 
+1628628709.982542 - 20968: [utils.py:29 - validate_fields() ] Validating : dump 
+1628628709.982542 - 20968: [utils.py:42 - validate_fields() ] dump : valid 
+1628628709.982542 - 20968: [utils.py:29 - validate_fields() ] Validating : currency 
+1628628709.982542 - 20968: [utils.py:42 - validate_fields() ] currency : valid 
+1628628709.983541 - 20968: [utils.py:29 - validate_fields() ] Validating : sell 
+1628628709.983541 - 20968: [utils.py:42 - validate_fields() ] sell : valid 
+1628628709.983541 - 20968: [utils.py:29 - validate_fields() ] Validating : close_all_user_interface 
+1628628709.983541 - 20968: [utils.py:42 - validate_fields() ] close_all_user_interface : valid 
+1628628709.983541 - 20968: [utils.py:29 - validate_fields() ] Validating : task_stop 
+1628628709.983541 - 20968: [utils.py:42 - validate_fields() ] task_stop : valid 
+1628628709.983541 - 20968: [siosa_config.py:22 - __init__() ] Initialized config: {'account_name': '', 'poe_session_id': '', 'client_log_file_path': '', 'league': 'Standard', 'license_key': '', 'dump': [], 'currency': [], 'sell': [], 'close_all_user_interface': ['Esc'], 'task_stop': 'Ctrl+q'} 
+1628628710.000531 - 20968: [_internal.py:225 - _log() ]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) 

@@ -1,0 +1,96 @@
+
+  :host {
+    >.container {
+        max-width: 1264px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    ::ng-deep  {
+      :not(.settings-container .mat-tab-group).mat-tab-group {
+            flex-direction: row;
+            height: 100%;
+        }
+        :not(.settings-container .mat-tab-header).mat-tab-header {
+          border-bottom: none;
+        }
+        :not(.settings-container .mat-tab-header-pagination).mat-tab-header-pagination {
+            display: none !important;
+        }
+        :not(.settings-container .mat-tab-labels).mat-tab-labels {
+            flex-direction: column;
+            height: 100%;
+        }
+        :not(.settings-container .mat-tab-label).mat-tab-label:last-of-type {
+          margin-top: auto;
+        }
+        :not(.settings-container .mat-ink-bar).mat-ink-bar {
+            height: 100%;
+            left: 98% !important;
+        }
+        :not(.settings-container .mat-tab-body-wrapper).mat-tab-body-wrapper {
+            flex: 1 1 auto;
+            padding: 24px;
+        }
+    }
+  }
+
+  .tab-content {
+    display:flex;
+    flex-direction: column;
+  }
+  .tab-header {
+    height: 40px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+  }
+  .tab-content-container {
+    flex: 1;
+    padding-top: 12px;
+  }
+  .tab-header-heading {
+    width: 400px;
+  }
+  .container {
+    align-self: center;
+  }
+  .tasks-container {
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    align-items: stretch;
+  }
+  .settings-container {
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    align-items: stretch;
+  }
+  .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .task-button {
+    margin-right: 8px;
+  }
+  .example-button-row {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .rollerconfig-full-width {
+    width: 100%;
+  }
+  .spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .fab-container {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }

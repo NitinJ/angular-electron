@@ -1,9 +1,10 @@
 {
-  "name": "angular-electron",
+  "name": "siosa",
   "version": "10.1.0",
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "@electron/remote": "1.2.0"
+    "@electron/remote": "1.2.0",
+    "tree-kill": "^1.2.2"
   }
 }

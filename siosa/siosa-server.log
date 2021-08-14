@@ -1,0 +1,24 @@
+1628627732.484341 - 7172: [utils.py:29 - validate_fields() ] Validating : account_name 
+1628627732.484341 - 7172: [utils.py:39 - validate_fields() ] account_name : invalid 
+1628627732.485341 - 7172: [utils.py:29 - validate_fields() ] Validating : poe_session_id 
+1628627732.485341 - 7172: [utils.py:39 - validate_fields() ] poe_session_id : invalid 
+1628627732.485341 - 7172: [utils.py:29 - validate_fields() ] Validating : client_log_file_path 
+1628627732.485341 - 7172: [utils.py:39 - validate_fields() ] client_log_file_path : invalid 
+1628627732.485341 - 7172: [utils.py:29 - validate_fields() ] Validating : league 
+1628627733.633472 - 7172: [utils.py:42 - validate_fields() ] league : valid 
+1628627733.634471 - 7172: [utils.py:29 - validate_fields() ] Validating : license_key 
+1628627733.634471 - 7172: [license.py:29 - valid() ] Validating license 
+1628627733.634471 - 7172: [license.py:31 - valid() ] License key not set ! 
+1628627733.634471 - 7172: [utils.py:39 - validate_fields() ] license_key : invalid 
+1628627733.634471 - 7172: [utils.py:29 - validate_fields() ] Validating : dump 
+1628627733.634471 - 7172: [utils.py:42 - validate_fields() ] dump : valid 
+1628627733.634471 - 7172: [utils.py:29 - validate_fields() ] Validating : currency 
+1628627733.635472 - 7172: [utils.py:42 - validate_fields() ] currency : valid 
+1628627733.635472 - 7172: [utils.py:29 - validate_fields() ] Validating : sell 
+1628627733.635472 - 7172: [utils.py:42 - validate_fields() ] sell : valid 
+1628627733.635472 - 7172: [utils.py:29 - validate_fields() ] Validating : close_all_user_interface 
+1628627733.635472 - 7172: [utils.py:42 - validate_fields() ] close_all_user_interface : valid 
+1628627733.635472 - 7172: [utils.py:29 - validate_fields() ] Validating : task_stop 
+1628627733.635472 - 7172: [utils.py:42 - validate_fields() ] task_stop : valid 
+1628627733.635472 - 7172: [siosa_config.py:22 - __init__() ] Initialized config: {'account_name': '', 'poe_session_id': '', 'client_log_file_path': '', 'league': 'Standard', 'license_key': '', 'dump': [], 'currency': [], 'sell': [], 'close_all_user_interface': ['Esc'], 'task_stop': 'Ctrl+q'} 
+1628627733.654461 - 7172: [_internal.py:225 - _log() ]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) 

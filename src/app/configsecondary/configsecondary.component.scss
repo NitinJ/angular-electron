@@ -1,0 +1,43 @@
+.config-form-field {
+
+}
+.config-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-card {
+    width: 400px;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.example-form {
+    min-width: 350px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.file-select-button-container {
+    padding-bottom: 10px;
+}
+
+.side-div {
+    margin-top: 20px;
+}
+.side-div .mat-card {
+ box-shadow: none !important;
+}
